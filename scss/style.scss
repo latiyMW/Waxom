@@ -59,17 +59,21 @@ header {
     text-decoration: none;
     color: #ffffff;
     transition: 0.5s;
+        &-svg {
+            fill: currentColor;
+        }
+        &-txt {
+            @include fontRaleway(34px, 1.2, 400, currentColor);
+        }
+        &:hover {
+            color: #c7b299;
+            transition: 0.5s;
+        }
+        &:active {
+            color: #4e3427;
+            transition: 0.5s;
+        }
 }
-&:hover {
-    color: #c7b299;
-    transition: 0.5s;
-}
-    &-svg {
-        fill: currentColor;
-    }
-    &-txt {
-        @include fontRaleway(34px,1.2,400,#ffffff)
-    }
 .header-top-nav {
     width: 775px;
     box-sizing: border-box;
@@ -87,10 +91,10 @@ header {
             list-style: none;
         }
             &-ul li a {
-            @include fontMontserrat(14px, 1.2, 300, #ffffff);
-            text-decoration: none;
-            transition: 0.5s;
-            }
+                @include fontMontserrat(14px, 1.2, 300, #ffffff);
+                text-decoration: none;
+                transition: 0.5s;
+                }
             &-ul li a:hover {
                 color: #c7b299;
                 transition: 0.5s;
@@ -106,17 +110,22 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-    }
         &-shop {
             color: #ffffff;
         }
-        &-shop-svg {
-            fill: currentColor;
-            /*stroke: #ffffff;*/
-        }
+            &-shop-svg {
+                fill: currentColor;
+            }
         &-shop:hover {
             color: #c7b299;
             transition: 0.5s;
+        }
+        &-shop:active {
+            color: #4e3427;
+            transition: 0.5s;
+        }
+        &-search {
+            color: #ffffff;
         }
         &-search-svg {
             fill: #ffffff;
@@ -125,6 +134,11 @@ header {
             color: #c7b299;
             transition: 0.5s;
         }
+        &-search:active {
+            color: #4e3427;
+            transition: 0.5s;
+        }
+    }
 }
 // header-bottom
 .header-bottom {

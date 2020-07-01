@@ -52,12 +52,6 @@ header {
   transition: 0.5s;
 }
 
-.header-top-logo:hover {
-  color: #c7b299;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
 .header-top-logo-svg {
   fill: currentColor;
 }
@@ -67,7 +61,19 @@ header {
   font-size: 34px;
   line-height: 1.2;
   font-weight: 400;
-  color: #ffffff;
+  color: currentColor;
+}
+
+.header-top-logo:hover {
+  color: #c7b299;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header-top-logo:active {
+  color: #4e3427;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header-top-nav {
@@ -138,27 +144,42 @@ header {
           align-items: center;
 }
 
-.header-top-nav-shop {
+.header-top-nav-item-shop {
   color: #ffffff;
 }
 
-.header-top-nav-shop-svg {
+.header-top-nav-item-shop-svg {
   fill: currentColor;
-  /*stroke: #ffffff;*/
 }
 
-.header-top-nav-shop:hover {
+.header-top-nav-item-shop:hover {
   color: #c7b299;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.header-top-nav-search-svg {
+.header-top-nav-item-shop:active {
+  color: #4e3427;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header-top-nav-item-search {
+  color: #ffffff;
+}
+
+.header-top-nav-item-search-svg {
   fill: #ffffff;
 }
 
-.header-top-nav-search:hover {
+.header-top-nav-item-search:hover {
   color: #c7b299;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header-top-nav-item-search:active {
+  color: #4e3427;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
