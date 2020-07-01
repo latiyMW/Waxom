@@ -1,0 +1,45 @@
+//миксины
+@mixin button {
+    display: block;
+    width: 170px;
+    height: 53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #998675;
+    border: 1px solid #998675;
+    border-radius: 3px;
+    @include fontRaleway(14px, 23px, 800, #ffffff);
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover {
+        background-color: transparent;
+        transition: 0.5s;
+    }
+    &:active {
+        color: #998675;
+        transition: 0.5s;
+    }
+}
+@mixin fontRaleway($fs,$lh,$fw,$col) {
+    font-family: 'Raleway', sans-serif;
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+    color: $col;
+}
+@mixin fontRoboto($fs,$lh,$fw,$col) {
+    font-family: 'Roboto', sans-serif;
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+    color: $col;
+}
+@mixin fontMontserrat($fs,$lh,$fw,$col) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: $fs;
+    line-height: $lh;
+    font-weight: $fw;
+    color: $col;
+}

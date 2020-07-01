@@ -2,28 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
-//миксины
-@mixin fontRaleway($fs,$lh,$fw,$col) {
-    font-family: 'Raleway', sans-serif;
-    font-size: $fs;
-    line-height: $lh;
-    font-weight: $fw;
-    color: $col;
-}
-@mixin fontRoboto($fs,$lh,$fw,$col) {
-    font-family: 'Roboto', sans-serif;
-    font-size: $fs;
-    line-height: $lh;
-    font-weight: $fw;
-    color: $col;
-}
-@mixin fontMontserrat($fs,$lh,$fw,$col) {
-    font-family: 'Montserrat', sans-serif;
-    font-size: $fs;
-    line-height: $lh;
-    font-weight: $fw;
-    color: $col;
-}
+@import "mixin";
 // стили
 body {
     margin: 0 0;
@@ -59,20 +38,20 @@ header {
     text-decoration: none;
     color: #ffffff;
     transition: 0.5s;
-        &-svg {
-            fill: currentColor;
-        }
-        &-txt {
-            @include fontRaleway(34px, 1.2, 400, currentColor);
-        }
-        &:hover {
-            color: #c7b299;
-            transition: 0.5s;
-        }
-        &:active {
-            color: #4e3427;
-            transition: 0.5s;
-        }
+    &-svg {
+        fill: currentColor;
+    }
+    &-txt {
+        @include fontRaleway(34px, 1.2, 400, currentColor);
+    }
+    &:hover {
+        color: #c7b299;
+        transition: 0.5s;
+    }
+    &:active {
+        color: #4e3427;
+        transition: 0.5s;
+    }
 }
 .header-top-nav {
     width: 775px;
@@ -209,27 +188,7 @@ header {
                     text-align: center;
                 }
             &-button {
-                display: block;
-                width: 170px;
-                height: 53px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #998675;
-                border: 1px solid #998675;
-                border-radius: 3px;
-                @include fontRaleway(14px, 23px, 800, #ffffff);
-                text-transform: uppercase;
-                text-decoration: none;
-                transition: 0.5s;
-            }
-            &-button:hover {
-                background-color: transparent;
-                transition: 0.5s;
-            }
-            &-button:active {
-                color: #998675;
-                transition: 0.5s;
+                @include button()
             }
     }
     .carusel-pagination {
@@ -263,11 +222,13 @@ header {
         }
     }   
 }
+// main
 main {
     width: 1920px;
     margin: 0 0;
     padding: 0 0;
 }
+// featur
 .featur {
     width: 100%;
     margin: 80px 0;
@@ -329,6 +290,7 @@ main {
         padding-top: 23px;
     }
 }
+// realization
 .realization {
     width: 100%;
     height: 700px;
@@ -378,6 +340,7 @@ main {
         }
     }
 }
+// rate
 .rate {
     width: 100%;
     padding: 45px 375px;
@@ -400,26 +363,6 @@ main {
         @include fontMontserrat(18px, 1.2, 300, #615855);
     }
     .rate-purchase {
-        display: block;
-        width: 170px;
-        height: 53px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #998675;
-        border: 1px solid #998675;
-        border-radius: 3px;
-        @include fontRaleway(14px, 23px, 800, #ffffff);
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: 0.5s;
-        &:hover {
-            background-color: transparent;
-            transition: 0.5s;
-        }
-        &:active {
-            color: #998675;
-            transition: 0.5s;
-        }
+        @include button();
     }
 }
