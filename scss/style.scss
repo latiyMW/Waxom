@@ -270,7 +270,7 @@ main {
 }
 .featur {
     width: 100%;
-    margin: 80px 0 165px 0;
+    margin: 80px 0;
     padding: 0 375px;
     box-sizing: border-box;
     display: flex;
@@ -327,5 +327,99 @@ main {
     }
     &:nth-child(4) {
         padding-top: 23px;
+    }
+}
+.realization {
+    width: 100%;
+    height: 700px;
+    padding: 80px 345px 0 345px;
+    box-sizing: border-box;
+    overflow: hidden;
+    & h3 {
+        margin: 0 0 25px 0;
+        @include fontRaleway(30px, 1.2, 600, #555555);
+        text-align: center;
+    }
+    & p {
+        display: block;
+        width: 757px;
+        margin: 0 auto 40px auto;
+        @include fontMontserrat(16px, 28px, 300, #8c8c8c);
+        text-align: center;
+    }
+    .realization-idea {
+        width: 1235px;
+        display: flex;
+        position: relative;
+        box-sizing: border-box;
+        &-img:first-child {
+            position: absolute;
+            top: 81px;
+            left: 1px;
+            z-index: 1;
+        }
+        &-img:nth-child(2) {
+            margin: 0 auto;
+            z-index: 3;
+        }
+        &-img:last-child {
+            position: absolute;
+            top: 81px;
+            right: 1px;
+            z-index: 1;
+        }
+        &-img:first-child:hover {
+            z-index: 5;
+            transition: 1s, ease-in, 1s;
+        }
+        &-img:last-child:hover {
+            z-index: 5;
+            transition: 1s, ease-in, 1s;
+        }
+    }
+}
+.rate {
+    width: 100%;
+    padding: 45px 375px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f5f8;
+    background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
+    &-waxom h3 {
+        margin: 0 0;
+        @include fontRaleway(28px, 1.2, 400, #ffffff);
+        text-transform: capitalize;
+        span {
+            color: #c7b299;
+        }
+    }
+    &-waxom p {
+        margin: 5px 0;
+        @include fontMontserrat(18px, 1.2, 300, #615855);
+    }
+    .rate-purchase {
+        display: block;
+        width: 170px;
+        height: 53px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #998675;
+        border: 1px solid #998675;
+        border-radius: 3px;
+        @include fontRaleway(14px, 23px, 800, #ffffff);
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: 0.5s;
+        &:hover {
+            background-color: transparent;
+            transition: 0.5s;
+        }
+        &:active {
+            color: #998675;
+            transition: 0.5s;
+        }
     }
 }
