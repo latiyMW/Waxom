@@ -389,3 +389,75 @@ header {
           transform: scale(1.5);
   border: 2px solid transparent;
 }
+
+main {
+  width: 1920px;
+  margin: 0 0;
+  padding: 0 0;
+}
+
+.featur {
+  width: 100%;
+  margin: 80px 0 165px 0;
+  padding: 0 380px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.features1 {
+  width: 300px;
+  padding: 10px 10px 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.features1-icon {
+  display: block;
+  margin: 0 0 30px 0;
+  fill: #555555;
+}
+
+.features1 h4 {
+  margin: 0 0 20px 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #555555;
+}
+
+.features1 p {
+  margin: 0 0 35px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  color: #8c8c8c;
+  text-align: center;
+}
+
+.features1::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #555555;
+}

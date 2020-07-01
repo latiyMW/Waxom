@@ -261,6 +261,48 @@ header {
             transform: scale(1.5);
             border: 2px solid transparent;
         }
+    }   
+}
+main {
+    width: 1920px;
+    margin: 0 0;
+    padding: 0 0;
+}
+.featur {
+    width: 100%;
+    margin: 80px 0 165px 0;
+    padding: 0 380px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.features1 {
+    width: 300px;
+    padding: 10px 10px 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-icon {
+        display: block;
+        margin: 0 0 30px 0;
+        fill: #555555;
     }
-    
+    & h4 {
+        margin: 0 0 20px 0;
+        @include fontRaleway(22px, 1.2, 600, #555555)
+    }
+    & p {
+        margin: 0 0 35px 0;
+        @include fontMontserrat(14px, 24px, 300, #8c8c8c)
+        text-align: center;
+    }
+    &::after {
+        content: "";
+        display: block;
+        width: 70px;
+        height: 3px;
+        background-color: #555555;
+    }
 }
