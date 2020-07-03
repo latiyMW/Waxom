@@ -1,13 +1,95 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap");
+/*@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');*/
+@font-face {
+  font-family: 'raleway';
+  src: url("../fonts/raleway-regular.woff2") format("woff2");
+  src: url("../fonts/raleway-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-regular.eot");
+  src: url("../fonts/raleway-regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'roboto';
+  src: url("../fonts/roboto-regular.woff2") format("woff2");
+  src: url("../fonts/roboto-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-regular.eot");
+  src: url("../fonts/roboto-regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'raleway';
+  src: url("../fonts/raleway-semibold.woff2") format("woff2");
+  src: url("../fonts/raleway-semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-semibold.eot");
+  src: url("../fonts/raleway-semibold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'raleway';
+  src: url("../fonts/raleway-bold.woff2") format("woff2");
+  src: url("../fonts/raleway-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-bold.eot");
+  src: url("../fonts/raleway-bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'raleway';
+  src: url("../fonts/raleway-extrabold.woff2") format("woff2");
+  src: url("../fonts/raleway-extrabold.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-extrabold.eot");
+  src: url("../fonts/raleway-extrabold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'raleway';
+  src: url("../fonts/raleway-medium.woff2") format("woff2");
+  src: url("../fonts/raleway-medium.eot?#iefix") format("embedded-opentype"), url("../fonts/raleway-medium.eot");
+  src: url("../fonts/raleway-medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat-regular.woff2") format("woff2");
+  src: url("../fonts/montserrat-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-regular.eot");
+  src: url("../fonts/montserrat-regular.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat-light.woff2") format("woff2");
+  src: url("../fonts/montserrat-light.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-light.eot");
+  src: url("../fonts/montserrat-light.otf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'montserrat';
+  src: url("../fonts/montserrat-extralight.eot");
+  src: url("../fonts/montserrat-extralight.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-extralight.eot");
+  src: url("../fonts/montserrat-extralight.otf");
+  font-weight: 200;
+  font-style: normal;
+}
+
 body {
-  margin: 0 0;
+  width: 1920px;
+  margin: 0 auto;
   padding: 0 0;
 }
 
 header {
-  width: 1920px;
+  width: 100%;
   max-height: 1024px;
   margin: 0 0;
   padding: 0 0;
@@ -57,11 +139,12 @@ header {
 }
 
 .header-top-logo-txt {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'raleway', 'calibri', sans-serif;
   font-size: 34px;
   line-height: 1.2;
   font-weight: 400;
   color: currentColor;
+  font-style: normal;
 }
 
 .header-top-logo:hover {
@@ -106,24 +189,25 @@ header {
   list-style: none;
 }
 
-.header-top-nav .header-top-menu-ul li a {
-  font-family: 'Montserrat', sans-serif;
+.header-top-nav .header-top-menu-link {
+  font-family: 'montserrat', 'verdana', sans-serif;
   font-size: 14px;
   line-height: 1.2;
   font-weight: 300;
   color: #ffffff;
+  font-style: normal;
   text-decoration: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.header-top-nav .header-top-menu-ul li a:hover {
+.header-top-nav .header-top-menu-link:hover {
   color: #c7b299;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.header-top-nav .header-top-menu-ul li a:active {
+.header-top-nav .header-top-menu-link:active {
   color: #4e3427;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -282,30 +366,33 @@ header {
           align-items: center;
 }
 
-.header-bottom .carusel-all-txt h2 {
-  font-family: 'Raleway', sans-serif;
+.header-bottom .carusel-all-txt-h2 {
+  font-family: 'raleway', 'calibri', sans-serif;
   font-size: 36px;
   line-height: 1.2;
   font-weight: 500;
   color: #ffffff;
+  font-style: normal;
   margin: 0 0 10px 0;
 }
 
-.header-bottom .carusel-all-txt h1 {
-  font-family: 'Raleway', sans-serif;
+.header-bottom .carusel-all-txt-h1 {
+  font-family: 'raleway', 'calibri', sans-serif;
   font-size: 52px;
   line-height: 1.2;
   font-weight: 800;
   color: #ffffff;
+  font-style: normal;
   margin: 0 0 15px 0;
 }
 
-.header-bottom .carusel-all-txt p {
-  font-family: 'Montserrat', sans-serif;
+.header-bottom .carusel-all-txt-p {
+  font-family: 'montserrat', 'verdana', sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 300;
   color: #ffffff;
+  font-style: normal;
   margin: 0 0;
   text-align: center;
 }
@@ -326,11 +413,12 @@ header {
   background-color: #998675;
   border: 1px solid #998675;
   border-radius: 3px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'raleway', 'calibri', sans-serif;
   font-size: 14px;
   line-height: 23px;
   font-weight: 800;
   color: #ffffff;
+  font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
   -webkit-transition: 0.5s;
@@ -391,7 +479,7 @@ header {
 }
 
 main {
-  width: 1920px;
+  width: 100%;
   margin: 0 0;
   padding: 0 0;
 }
@@ -439,20 +527,22 @@ main {
 
 .features h4 {
   margin: 0 0 20px 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'raleway', 'calibri', sans-serif;
   font-size: 22px;
   line-height: 1.2;
   font-weight: 600;
   color: #555555;
+  font-style: normal;
 }
 
 .features p {
   margin: 0 0 35px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'montserrat', 'verdana', sans-serif;
   font-size: 14px;
   line-height: 24px;
   font-weight: 300;
   color: #8c8c8c;
+  font-style: normal;
   text-align: center;
 }
 
@@ -503,25 +593,27 @@ main {
   overflow: hidden;
 }
 
-.realization h3 {
+.realization-h3 {
   margin: 0 0 25px 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'raleway', 'calibri', sans-serif;
   font-size: 30px;
   line-height: 1.2;
   font-weight: 600;
   color: #555555;
+  font-style: normal;
   text-align: center;
 }
 
-.realization p {
+.realization-p {
   display: block;
   width: 757px;
   margin: 0 auto 40px auto;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'montserrat', 'verdana', sans-serif;
   font-size: 16px;
   line-height: 28px;
   font-weight: 300;
   color: #8c8c8c;
+  font-style: normal;
   text-align: center;
 }
 
@@ -585,27 +677,29 @@ main {
   background-image: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
 }
 
-.rate-waxom h3 {
+.rate-waxom-h3 {
   margin: 0 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'raleway', 'calibri', sans-serif;
   font-size: 28px;
   line-height: 1.2;
   font-weight: 400;
   color: #ffffff;
+  font-style: normal;
   text-transform: capitalize;
 }
 
-.rate-waxom h3 span {
+.rate-waxom-h3 span {
   color: #c7b299;
 }
 
-.rate-waxom p {
+.rate-waxom-p {
   margin: 5px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'montserrat', 'verdana', sans-serif;
   font-size: 18px;
   line-height: 1.2;
   font-weight: 300;
   color: #615855;
+  font-style: normal;
 }
 
 .rate .rate-purchase {
@@ -624,11 +718,12 @@ main {
   background-color: #998675;
   border: 1px solid #998675;
   border-radius: 3px;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'raleway', 'calibri', sans-serif;
   font-size: 14px;
   line-height: 23px;
   font-weight: 800;
   color: #ffffff;
+  font-style: normal;
   text-transform: uppercase;
   text-decoration: none;
   -webkit-transition: 0.5s;

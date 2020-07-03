@@ -1,16 +1,18 @@
 //Импорт
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');*/
 @import "mixin";
+@import "fonts";
 // стили
 body {
-    margin: 0 0;
+    width: 1920px;
+    margin: 0 auto;
     padding: 0 0; 
 }
 // header
 header {
-    width: 1920px;
+    width: 100%;
     max-height: 1024px;
     margin: 0 0;
     padding: 0 0;
@@ -69,16 +71,16 @@ header {
             align-items: center;
             list-style: none;
         }
-            &-ul li a {
+            &-link {
                 @include fontMontserrat(14px, 1.2, 300, #ffffff);
                 text-decoration: none;
                 transition: 0.5s;
                 }
-            &-ul li a:hover {
+            &-link:hover {
                 color: #c7b299;
                 transition: 0.5s;
             }
-            &-ul li a:active {
+            &-link:active {
                 color: #4e3427;
                 transition: 0.5s;
             }    
@@ -174,15 +176,15 @@ header {
                 flex-direction: column;
                 align-items: center;
             }
-                &-txt h2 {
+                &-txt-h2 {
                     @include fontRaleway(36px, 1.2, 500, #ffffff);
                     margin: 0 0 10px 0;
                 }
-                &-txt h1 {
+                &-txt-h1 {
                     @include fontRaleway(52px, 1.2, 800, #ffffff);
                     margin: 0 0 15px 0;
                 }
-                &-txt p {
+                &-txt-p {
                     @include fontMontserrat(16px, 24px, 300, #ffffff);
                     margin: 0 0;
                     text-align: center;
@@ -224,7 +226,7 @@ header {
 }
 // main
 main {
-    width: 1920px;
+    width: 100%;
     margin: 0 0;
     padding: 0 0;
 }
@@ -297,12 +299,12 @@ main {
     padding: 80px 345px 0 345px;
     box-sizing: border-box;
     overflow: hidden;
-    & h3 {
+    &-h3 {
         margin: 0 0 25px 0;
         @include fontRaleway(30px, 1.2, 600, #555555);
         text-align: center;
     }
-    & p {
+    &-p {
         display: block;
         width: 757px;
         margin: 0 auto 40px auto;
@@ -350,7 +352,7 @@ main {
     align-items: center;
     background-color: #f4f5f8;
     background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
-    &-waxom h3 {
+    &-waxom-h3 {
         margin: 0 0;
         @include fontRaleway(28px, 1.2, 400, #ffffff);
         text-transform: capitalize;
@@ -358,7 +360,7 @@ main {
             color: #c7b299;
         }
     }
-    &-waxom p {
+    &-waxom-p {
         margin: 5px 0;
         @include fontMontserrat(18px, 1.2, 300, #615855);
     }

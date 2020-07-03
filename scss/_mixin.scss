@@ -23,23 +23,26 @@
     }
 }
 @mixin fontRaleway($fs,$lh,$fw,$col) {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'raleway', 'calibri', sans-serif;
     font-size: $fs;
     line-height: $lh;
     font-weight: $fw;
     color: $col;
+    font-style: normal;
 }
 @mixin fontRoboto($fs,$lh,$fw,$col) {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'roboto', 'arial', sans-serif;
     font-size: $fs;
     line-height: $lh;
     font-weight: $fw;
     color: $col;
+    font-style: normal;
 }
 @mixin fontMontserrat($fs,$lh,$fw,$col) {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'montserrat', 'verdana', sans-serif;
     font-size: $fs;
     line-height: $lh;
     font-weight: $fw;
     color: $col;
+    font-style: normal;
 }
