@@ -25,8 +25,8 @@ header {
 // header-top
 .header-top {
     width: 100%;
-    margin: 0 0 250px 0;
-    padding: 35px 375px 0 375px;
+    margin: 0 0 281px 0;
+    padding: 38px 375px 0 375px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -171,18 +171,18 @@ header {
         align-items: center;
             &-txt {
                 min-height: 160px;
-                margin: 0 0 40px 0;
+                margin: 0 0 48px 0;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
             }
                 &-txt-h2 {
                     @include fontRaleway(36px, 1.2, 500, #ffffff);
-                    margin: 0 0 10px 0;
+                    margin: 0 0;
                 }
                 &-txt-h1 {
                     @include fontRaleway(52px, 1.2, 800, #ffffff);
-                    margin: 0 0 15px 0;
+                    margin: 0 0 12px 0;
                 }
                 &-txt-p {
                     @include fontMontserrat(16px, 24px, 300, #ffffff);
@@ -196,7 +196,7 @@ header {
     .carusel-pagination {
         width: 100%;
         height: 15px;
-        margin: 0 0 40px 0;
+        margin: 0 0 45px 0;
         padding: 5px 0;
         display: flex;
         justify-content: center;
@@ -233,7 +233,7 @@ main {
 // featur
 .featur {
     width: 100%;
-    margin: 80px 0;
+    margin: 70px 0;
     padding: 0 375px;
     box-sizing: border-box;
     display: flex;
@@ -251,11 +251,11 @@ main {
     text-decoration: none;
     &-icon {
         display: block;
-        margin: 0 0 30px 0;
+        margin: 0 0 24px 0;
         fill: #555555;
     }
     & h4 {
-        margin: 0 0 20px 0;
+        margin: 0 0 15px 0;
         @include fontRaleway(22px, 1.2, 600, #555555)
     }
     & p {
@@ -295,19 +295,18 @@ main {
 // realization
 .realization {
     width: 100%;
-    height: 700px;
-    padding: 80px 345px 0 345px;
+    padding: 75px 345px 0 345px;
     box-sizing: border-box;
     overflow: hidden;
     &-h3 {
-        margin: 0 0 25px 0;
+        margin: 0 0 15px 0;
         @include fontRaleway(30px, 1.2, 600, #555555);
         text-align: center;
     }
     &-p {
         display: block;
         width: 757px;
-        margin: 0 auto 40px auto;
+        margin: 0 auto 36px auto;
         @include fontMontserrat(16px, 28px, 300, #8c8c8c);
         text-align: center;
     }
@@ -345,7 +344,7 @@ main {
 // rate
 .rate {
     width: 100%;
-    padding: 45px 375px;
+    padding: 40px 375px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
@@ -366,5 +365,146 @@ main {
     }
     .rate-purchase {
         @include button();
+    }
+}
+.latest-projects {
+    width: 100%;
+    height: 910px;
+    padding: 75px 345px 75px 345px;
+    box-sizing: border-box;
+    &-h3 {
+        margin: 0 0 20px 0;
+        @include fontRaleway(30px, 1.2, 600, #555555);
+        text-align: center;
+    }
+    &-p {
+        display: block;
+        width: 757px;
+        margin: 0 auto 35px auto;
+        @include fontMontserrat(16px, 28px, 300, #8c8c8c);
+        text-align: center;
+    }
+    &-show {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        align-items: stretch;
+        align-content: space-evenly;
+        &-list {
+            margin: 0 0 40px 0;
+            padding: 0 277px;
+            display: flex;
+            justify-content: space-between;
+            &-btn {
+                display: block;
+                margin-right: 10px; 
+                padding: 5px 21px;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: transparent;
+                border: 1px solid #ebebeb;
+                border-radius: 3px;
+                @include fontMontserrat(14px, 21px, 300, #8c8c8c);
+                text-transform: capitalize;
+                text-decoration: none;
+                transition: 0.5s;
+            &:hover {
+                color: #ffffff;
+                background-color: #998675;
+                border-color: #998675;
+                transition: 0.5s;
+            }
+            &:active {
+                color: #998675;
+                background-color: transparent;
+                border-color: #998675;
+                transition: 0.5s;
+            }
+            }
+        }
+        &-items {
+            width: 370px;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            overflow: hidden;
+            background-color: #615855;
+            &-a {
+                display: block;
+                text-decoration: none;
+                box-sizing: border-box;
+                position: relative;
+                .items-img {
+                    width: 100%;
+                    display: block;
+                }
+                .latest-projects-show-items-a-about {
+                    width: 100%;
+                    height: 103px;
+                    padding: 25px;
+                    box-sizing: border-box;
+                    position: relative;
+                    background-color: #fbfaf8;
+                &::before {
+                    content: "";
+                    border: 30px solid transparent;
+                    border-bottom: 30px solid #fbfaf8;
+                    position: absolute;
+                    top: -42px;
+                    left: 5px;
+                }
+                    .items-a-about-h4 {
+                        margin: 0 0 10px 0;
+                        
+                        @include fontRaleway(20px, 1.2, 500, #c7b299);
+                        text-transform: capitalize;
+                    }
+                    .items-a-about-p {
+                        margin: 0;
+                        @include fontMontserrat(14px, 20px, 300, #d1d1d1);
+                        text-transform: capitalize;
+                    }
+                }
+                .items-btn-link, .items-btn-search {
+                    width: 26px;
+                    height: 26px;
+                    position: absolute;
+                    display: none;
+                    border: none;
+                    background-color: transparent;
+                    top: 33%;
+                    fill: #ffffff;
+                }
+                .items-btn-link {
+                    left: 39%;
+                }
+                .items-btn-search {
+                    right: 39%;
+                }
+            &:hover .items-btn-link {
+                display: block;
+            }
+            &:hover .items-btn-search {
+                display: block;
+            }
+            &:hover .items-btn-link:hover {
+                fill: #c7b299;
+            }
+            &:hover .items-btn-search:hover {
+                fill: #c7b299;
+            }
+            &:hover .items-img {
+                filter: brightness(33%);
+                transform: scale(1.2);
+                transition-property: transform, filter;
+                transition-duration: 1.5s, 0.2s;
+                transition-timing-function: ease-out;
+            }
+            }
+        }
     }
 }
