@@ -743,7 +743,6 @@ main {
 
 .latest-projects {
   width: 100%;
-  height: 910px;
   padding: 75px 345px 75px 345px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -763,7 +762,7 @@ main {
 .latest-projects-p {
   display: block;
   width: 757px;
-  margin: 0 auto 35px auto;
+  margin: 0 auto 10px auto;
   font-family: 'montserrat', 'verdana', sans-serif;
   font-size: 16px;
   line-height: 28px;
@@ -774,13 +773,10 @@ main {
 }
 
 .latest-projects-show {
+  height: 832px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -794,7 +790,7 @@ main {
 }
 
 .latest-projects-show-list {
-  margin: 0 0 40px 0;
+  margin: 0 0 5px 0;
   padding: 0 277px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -877,6 +873,8 @@ main {
 .latest-projects-show-items-a .items-img {
   width: 100%;
   display: block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .latest-projects-show-items-a .latest-projects-show-items-a-about {
@@ -887,6 +885,8 @@ main {
           box-sizing: border-box;
   position: relative;
   background-color: #fbfaf8;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .latest-projects-show-items-a .latest-projects-show-items-a-about::before {
@@ -896,10 +896,15 @@ main {
   position: absolute;
   top: -42px;
   left: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .latest-projects-show-items-a .latest-projects-show-items-a-about .items-a-about-h4 {
   margin: 0 0 10px 0;
+  text-transform: capitalize;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   font-family: 'raleway', 'calibri', sans-serif;
   font-size: 20px;
   line-height: 1.2;
@@ -907,6 +912,7 @@ main {
   color: #c7b299;
   font-style: normal;
   text-transform: capitalize;
+  transition: 0.5s;
 }
 
 .latest-projects-show-items-a .latest-projects-show-items-a-about .items-a-about-p {
@@ -949,10 +955,14 @@ main {
 
 .latest-projects-show-items-a:hover .items-btn-link:hover {
   fill: #c7b299;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .latest-projects-show-items-a:hover .items-btn-search:hover {
   fill: #c7b299;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .latest-projects-show-items-a:hover .items-img {
@@ -964,8 +974,32 @@ main {
   transition-property: -webkit-transform, -webkit-filter;
   transition-property: transform, filter;
   transition-property: transform, filter, -webkit-transform, -webkit-filter;
-  -webkit-transition-duration: 1.5s, 0.2s;
-          transition-duration: 1.5s, 0.2s;
+  -webkit-transition-duration: 1.5s, 0.5s;
+          transition-duration: 1.5s, 0.5s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
+}
+
+.latest-projects-show-items-a:hover .latest-projects-show-items-a-about {
+  background-color: #362f2d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.latest-projects-show-items-a:hover .latest-projects-show-items-a-about::before {
+  border-bottom: 30px solid #362f2d;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.latest-projects-show-items-a:hover .items-a-about-h4 {
+  color: #ffffff;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+.latest-projects-show-items-a:hover .items-a-about-p {
+  color: #c7b299;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
 }
