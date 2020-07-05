@@ -637,6 +637,7 @@ main {
 .excellent-for-mobile-devices {
     width: 100%;
     height: 695px;
+    margin: 0;
     padding: 79px 390px 0 390px;
     box-sizing: border-box;
     display: flex;
@@ -655,7 +656,7 @@ main {
         height: 616px;
         display: block;
         position: absolute;
-        top: 2px;
+        top: 0px;
         left: -450px;
     }
         .excellent-for-mobile-devices-h3 {
@@ -705,6 +706,52 @@ main {
             top: 101px;
             left: -58px;
         }
+        }
+    }
+}
+.achievements {
+    width: 100%;
+    height: 300px;
+    margin: 0;
+    padding: 70px 495px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: #f4f5f8;
+    background-image: linear-gradient(90.0deg, #211b19 0%, #4e3427 100%);
+    .achiev {
+        width: 136px;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-sizing: border-box;
+        position: relative;
+        &-svg {
+            width: 46px;
+            height: 47px;
+            margin: 0 0 28px 0;
+            fill: #c7b299;
+        }
+        &-h2 {
+            margin: 0 0 17px 0;
+            @include fontMontserrat(48px, 36px, 200, #ffffff);
+            text-align: center;
+        }
+        &-p {
+            margin: 0 0 0 0;
+            @include fontMontserrat(14px, 20px, 300, #c7b299);
+            text-transform: uppercase;
+        }
+        &::after {
+            content: "";
+            width: 30px;
+            height: 2px;
+            display: block;
+            background-color: #ffffff;
+            position: absolute;
+            top: 170px;
         }
     }
 }

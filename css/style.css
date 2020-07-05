@@ -1177,6 +1177,7 @@ main {
 .excellent-for-mobile-devices {
   width: 100%;
   height: 695px;
+  margin: 0;
   padding: 79px 390px 0 390px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1212,7 +1213,7 @@ main {
   height: 616px;
   display: block;
   position: absolute;
-  top: 2px;
+  top: 0px;
   left: -450px;
 }
 
@@ -1285,4 +1286,80 @@ main {
   position: absolute;
   top: 101px;
   left: -58px;
+}
+
+.achievements {
+  width: 100%;
+  height: 300px;
+  margin: 0;
+  padding: 70px 495px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #f4f5f8;
+  background-image: -webkit-gradient(linear, left top, right top, from(#211b19), to(#4e3427));
+  background-image: linear-gradient(90deg, #211b19 0%, #4e3427 100%);
+}
+
+.achievements .achiev {
+  width: 136px;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+}
+
+.achievements .achiev-svg {
+  width: 46px;
+  height: 47px;
+  margin: 0 0 28px 0;
+  fill: #c7b299;
+}
+
+.achievements .achiev-h2 {
+  margin: 0 0 17px 0;
+  font-family: 'montserrat', 'verdana', sans-serif;
+  font-size: 48px;
+  line-height: 36px;
+  font-weight: 200;
+  color: #ffffff;
+  font-style: normal;
+  text-align: center;
+}
+
+.achievements .achiev-p {
+  margin: 0 0 0 0;
+  font-family: 'montserrat', 'verdana', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: #c7b299;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.achievements .achiev::after {
+  content: "";
+  width: 30px;
+  height: 2px;
+  display: block;
+  background-color: #ffffff;
+  position: absolute;
+  top: 170px;
 }
