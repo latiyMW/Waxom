@@ -596,17 +596,26 @@ main {
             display: flex;
             justify-content: center;
             align-items: center;
+        
             &-svg {
+                width: 80px;
+                height: 80px;
                 fill: #ffffff;
                 transition-property: fill;
                 transition-duration: 0.8s;
             }
-            &-svg:hover {
-                fill: #c7b299;
-                transform: rotate(360deg);
-                transition-property: fill, transform;
-                transition-duration: 1s, 0.2s;
-            }
+        &:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        &:hover .video-presentation-overlay-btn-svg {
+            fill: #c7b299;
+            transform: rotate(360deg);
+            transition-property: fill, transform;
+            transition-duration: 1s, 0.2s;
+        }
+        &:active .video-presentation-overlay-btn-svg {
+            fill: #ffffff;
+        }
         }
         &-h3 {
             margin: 0 0 15px 0;

@@ -1112,6 +1112,8 @@ main {
 }
 
 .video-presentation-overlay-btn-svg {
+  width: 80px;
+  height: 80px;
   fill: #ffffff;
   -webkit-transition-property: fill;
   transition-property: fill;
@@ -1119,7 +1121,11 @@ main {
           transition-duration: 0.8s;
 }
 
-.video-presentation-overlay-btn-svg:hover {
+.video-presentation-overlay-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.video-presentation-overlay-btn:hover .video-presentation-overlay-btn-svg {
   fill: #c7b299;
   -webkit-transform: rotate(360deg);
           transform: rotate(360deg);
@@ -1129,6 +1135,10 @@ main {
   transition-property: fill, transform, -webkit-transform;
   -webkit-transition-duration: 1s, 0.2s;
           transition-duration: 1s, 0.2s;
+}
+
+.video-presentation-overlay-btn:active .video-presentation-overlay-btn-svg {
+  fill: #ffffff;
 }
 
 .video-presentation-overlay-h3 {
