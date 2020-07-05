@@ -755,3 +755,148 @@ main {
         }
     }
 }
+.recent-posts {
+    width: 100%;
+    margin: 0 0;
+    padding: 79px 375px;
+    box-sizing: border-box;
+    &-h3 {
+        margin: 0 auto 15px auto;
+        @include fontRaleway(30px, 1.2, 600, #555555);
+        text-align: center;
+    }
+    &-p {
+        width: 757px;
+        margin: 0 auto 35px auto;
+        @include fontMontserrat(16px, 28px, 300, #8c8c8c);
+        text-align: center;
+    }
+    &-items {
+        width: 100%;
+        margin: 0 0;
+        display: flex;
+        justify-content: space-between;
+        .recent-posts-item {
+            width: 370px;
+            margin: 0 0;
+            box-sizing: border-box;
+            display: block;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            &-img {
+                width: 370px;
+                height: 220px;
+                box-sizing: border-box;
+                background-color: #c7b299;
+                transition: 0.5s;
+            }
+            &-dis {
+                width: 370px;
+                margin: 0 0;
+                padding: 29px;
+                box-sizing: border-box;
+                &-h4 {
+                    margin: 0 0 12px 0;
+                    @include fontRaleway(20px, 1.2, 500, #555555);
+                    transition: 0.5s;
+                }
+                &-p {
+                    margin: 0 0 21px 0;
+                    @include fontMontserrat(14px, 22px, 300, #8c8c8c);
+                    transition: 0.5s;
+                }
+                &-span {
+                    margin: 0 0 0 0;
+                    display: block;
+                    @include fontMontserrat(14px, 20px, 300, #c7b299);
+                    position: relative;
+                    transition: 0.5s;
+                    &::after {
+                        content: "";
+                        width: 0;
+                        height: 0;
+                        display: block;
+                        border: 5px solid transparent;
+                        border-left: 5px solid #c7b299;
+                        position: absolute;
+                        top: 6px;
+                        left: 85px;
+                        transition: 0.5s;
+                    }
+                }
+                .recent-posts-item-dis-calendar {
+                    width: 50px;
+                    margin: 0 0;
+                    display: block;
+                    box-sizing: border-box;
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    .calendar-h4 {
+                        width: 100%;
+                        height: 35px;
+                        margin: 0 0;
+                        box-sizing: border-box;
+                        background-color: #363636;
+                        border-radius: 3.0px 3.0px 0.0px 0.0px;
+                        @include fontMontserrat(24px, 20px, 300, #ffffff);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.5s;
+                    }
+                    .calendar-p {
+                        width: 100%;
+                        height: 25px;
+                        margin: 0 0;
+                        box-sizing: border-box;
+                        background-color: #252525;;
+                        border-radius: 0.0px 0.0px 3.0px 3.0px;
+                        @include fontRoboto(12px,20px,400,#ffffff);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        &:hover .recent-posts-item-img {
+            filter: brightness(45%);
+            //transform: scale(1.2);
+            transition-property: transform, filter;
+            transition-duration: 1.5s, 0.5s;
+            transition-timing-function: ease-out;
+        }
+        &:hover .recent-posts-item-dis {
+            background-color: #362f2d;
+            transition: 0.5s;
+        }
+        &:hover .recent-posts-item-dis-h4 {
+            color: #c7b299;
+            transition: 0.5s;
+        }
+        &:hover .recent-posts-item-dis-p {
+            color: #ffffff;
+            transition: 0.5s;
+        }
+        &:hover .calendar-h4 {
+            background-color: #c7b299;
+            transition: 0.5s;
+        }
+        &:hover .calendar-p {
+            background-color: #a48d72;
+            transition: 0.5s;
+        }
+        &:active .recent-posts-item-dis-span {
+            color: #ffffff;
+        }
+        &:active .recent-posts-item-dis-span::after {
+            border-left: 5px solid #ffffff;
+            transition: 0.5s;
+        }
+        }
+    }
+}
