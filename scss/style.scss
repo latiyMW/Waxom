@@ -621,6 +621,7 @@ main {
             margin: 0 0 15px 0;
             @include fontRaleway(30px, 1.2, 500, #ffffff);
             text-align: center;
+            text-transform: capitalize;
         }
         &-p {
             width: 552px;
@@ -630,6 +631,80 @@ main {
         }
         &-time {
             @include fontMontserrat(14px, 24px, 400, #c7b299); 
+        }
+    }
+}
+.excellent-for-mobile-devices {
+    width: 100%;
+    height: 695px;
+    padding: 79px 390px 0 390px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #fbfaf8;
+    &-wrapper {
+        width: 657px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: relative;
+        box-sizing: border-box;
+    &::before {
+        content: url(../img/excellent-for-mobile-devices.png);
+        width: 423px;
+        height: 616px;
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: -450px;
+    }
+        .excellent-for-mobile-devices-h3 {
+            @include fontRaleway(30px, 1.2, 600, #555555);
+            margin: 113px 0 0 0;
+        }
+        .excellent-for-mobile-devices-p {
+            @include fontMontserrat(16px, 28px, 300, #8c8c8c);
+            margin: 27px 0 0 0;
+        }
+        .excellent-for-mobile-devices-ul {
+            @include fontMontserrat(16px, 32px, 300, #8c8c8c);
+            margin: 33px 0 0 0;
+            padding: 0;
+            list-style: none;
+            align-self: flex-end;
+            position: relative;
+        & li:first-child::before {
+            content: url(../img/excellent-for-mobile-devices-ul.svg);
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            top: 3px;
+            left: -58px;
+        }
+        & li:nth-child(2)::before {
+            content: url(../img/excellent-for-mobile-devices-ul.svg);
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            top: 35px;
+            left: -58px;
+        }
+        & li:nth-child(3)::before {
+            content: url(../img/excellent-for-mobile-devices-ul.svg);
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            top: 68px;
+            left: -58px;
+        }
+        & li:last-child::before {
+            content: url(../img/excellent-for-mobile-devices-ul.svg);
+            width: 21px;
+            height: 21px;
+            position: absolute;
+            top: 101px;
+            left: -58px;
+        }
         }
     }
 }
