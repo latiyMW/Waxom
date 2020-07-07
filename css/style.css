@@ -1626,3 +1626,49 @@ main {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
+.recent-posts .recent-posts-item-btn {
+  margin: 38px 0 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.recent-posts .recent-posts-item-btn .recent-posts-item-prev, .recent-posts .recent-posts-item-btn .recent-posts-item-next {
+  border: none;
+}
+
+.recent-posts .recent-posts-item-btn .recent-posts-item-prev-svg, .recent-posts .recent-posts-item-btn .recent-posts-item-next-svg {
+  width: 22px;
+  height: 22px;
+  fill: #d1d1d1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.recent-posts .recent-posts-item-btn .recent-posts-item-prev-svg:hover, .recent-posts .recent-posts-item-btn .recent-posts-item-next-svg:hover {
+  fill: #c7b299;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.customers {
+  width: 100%;
+  margin: 0 0;
+  padding: 140px 400px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url(../img/customers.jpg);
+}

@@ -908,4 +908,32 @@ main {
         }
         }
     }
+    .recent-posts-item-btn {
+        margin: 38px 0 0 0;
+        display: flex;
+        justify-content: center;
+        .recent-posts-item-prev, .recent-posts-item-next {
+            border: none;
+        }
+        .recent-posts-item-prev-svg, .recent-posts-item-next-svg {
+            width: 22px;
+            height: 22px;
+            fill: #d1d1d1;
+            transition: 0.5s;
+        }
+        .recent-posts-item-prev-svg:hover, .recent-posts-item-next-svg:hover {
+            fill: #c7b299;
+            transition: 0.5s;
+        }
+    }
+}
+.customers {
+    width: 100%;
+    margin: 0 0;
+    padding: 140px 400px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(../img/customers.jpg);
 }
