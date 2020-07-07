@@ -811,7 +811,7 @@ main {
                 &-span {
                     margin: 0 0 0 0;
                     display: block;
-                    @include fontMontserrat(14px, 20px, 300, #c7b299);
+                    @include fontMontserrat(14px, 20px, 300, #555555);
                     position: relative;
                     transition: 0.5s;
                     &::after {
@@ -820,7 +820,7 @@ main {
                         height: 0;
                         display: block;
                         border: 5px solid transparent;
-                        border-left: 5px solid #c7b299;
+                        border-left: 5px solid #555555;
                         position: absolute;
                         top: 6px;
                         left: 85px;
@@ -865,10 +865,11 @@ main {
             }
         &:hover .recent-posts-item-img {
             filter: brightness(45%);
-            //transform: scale(1.2);
+            transform: scale(1.2);
             transition-property: transform, filter;
             transition-duration: 1.5s, 0.5s;
             transition-timing-function: ease-out;
+            z-index: -5;
         }
         &:hover .recent-posts-item-dis {
             background-color: #362f2d;
@@ -880,6 +881,14 @@ main {
         }
         &:hover .recent-posts-item-dis-p {
             color: #ffffff;
+            transition: 0.5s;
+        }
+        &:hover .recent-posts-item-dis-span {
+            color: #c7b299;
+            transition: 0.5s;
+        }
+        &:hover .recent-posts-item-dis-span::after {
+            border-left: 5px solid #c7b299;
             transition: 0.5s;
         }
         &:hover .calendar-h4 {

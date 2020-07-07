@@ -1473,7 +1473,7 @@ main {
   font-size: 14px;
   line-height: 20px;
   font-weight: 300;
-  color: #c7b299;
+  color: #555555;
   font-style: normal;
   position: relative;
   -webkit-transition: 0.5s;
@@ -1486,7 +1486,7 @@ main {
   height: 0;
   display: block;
   border: 5px solid transparent;
-  border-left: 5px solid #c7b299;
+  border-left: 5px solid #555555;
   position: absolute;
   top: 6px;
   left: 85px;
@@ -1562,6 +1562,8 @@ main {
 .recent-posts-items .recent-posts-item:hover .recent-posts-item-img {
   -webkit-filter: brightness(45%);
           filter: brightness(45%);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
   -webkit-transition-property: -webkit-transform, -webkit-filter;
   transition-property: -webkit-transform, -webkit-filter;
   transition-property: transform, filter;
@@ -1570,6 +1572,7 @@ main {
           transition-duration: 1.5s, 0.5s;
   -webkit-transition-timing-function: ease-out;
           transition-timing-function: ease-out;
+  z-index: -5;
 }
 
 .recent-posts-items .recent-posts-item:hover .recent-posts-item-dis {
@@ -1586,6 +1589,18 @@ main {
 
 .recent-posts-items .recent-posts-item:hover .recent-posts-item-dis-p {
   color: #ffffff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.recent-posts-items .recent-posts-item:hover .recent-posts-item-dis-span {
+  color: #c7b299;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.recent-posts-items .recent-posts-item:hover .recent-posts-item-dis-span::after {
+  border-left: 5px solid #c7b299;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
