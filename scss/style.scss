@@ -937,3 +937,124 @@ main {
     align-items: center;
     background-image: url(../img/customers.jpg);
 }
+footer {
+    width: 1920px;
+}
+.footer-top {
+    width: 100%;
+    margin: 0 0;
+    padding: 80px 375px;
+    box-sizing: border-box;
+    background-color: #191919;
+    display: flex;
+    justify-content: space-between;
+    .waxom-read-more {
+        margin: 0 0;
+        padding: 0 0;
+        width: 258px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        &-logo {
+            display: flex;
+            align-items: center;
+            &-svg {
+                fill: #ffffff;
+            }
+            &-p {
+                @include fontRaleway(34px, 1.2, 400, #ffffff);
+                letter-spacing: -0.04em;
+            }
+        }
+        .waxom-read-more-p {
+            @include fontMontserrat(14px, 24px, 300, #555555);
+        }
+        .waxom-read-more-span {
+            @include fontMontserrat(14px, 20px, 400, #d1d1d1);
+        }  
+        &::after {
+            width: 0;
+            height: 0;
+            border: 8px solid transparent;
+            border-left: 8px solid #d1d1d1;
+        }
+        
+    }
+    .recent-posts {
+        margin: 0 0;
+        padding: 0 0;
+        width: 250px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        &-h3 {
+            @include fontRaleway(24px, 1.2, 700, #ffffff);
+        }
+        .recent-posts-a {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            border-bottom: 2px solid #252525;
+            .recent-posts-date {
+                @include fontMontserrat(12px, 20px, 300, #363636);
+            }
+            .recent-posts-heading {
+                @include fontMontserrat(14px, 20px, 300, #555555);
+            }
+        }
+    }
+    .our-twitter {
+        width: 267px;
+        margin: 0 0;
+        padding: 0 0;
+        &-h3 {
+            @include fontRaleway(24px, 1.2, 700, #ffffff);
+        }
+        &-info {
+            border-bottom: 2px solid #252525;
+            &-p {
+                @include fontMontserrat(14px, 20px, 300, #555555);
+                &-a {
+                    color: #00bff3;
+                }
+            }
+        }
+        .our-twitter-info-link {
+            color: #959595;
+        }
+    }
+    .dribbble-widget {
+        width: 270px;
+        margin: 0 0;
+        padding: 0 0;
+        box-sizing: border-box;
+        &-h3 {
+            @include fontRaleway(24px, 1.2, 700, #ffffff);
+        }
+        .dribbble-widget-galery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+    }
+}
+.footer-bottom {
+    width: 100%;
+    margin: 0 0;
+    padding: 45px 375px;
+    box-sizing: border-box;
+    background-color: #111111;
+    display: flex;
+    justify-content: space-between;
+    &-span {
+        @include fontMontserrat(13px, 20px, 300, #555555);
+        .footer-bottom-a {
+            color: #959595;
+            text-decoration: none;
+        }
+        .footer-bottom-line {
+            color: #252525;
+        }
+    }
+}
