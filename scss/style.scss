@@ -930,12 +930,23 @@ main {
 .customers {
     width: 100%;
     margin: 0 0;
-    padding: 140px 400px;
+    padding: 136px 400px;
     box-sizing: border-box;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-image: url(../img/customers.jpg);
+    &-link {
+        text-decoration: none;
+    }
+    &-link:hover {
+        filter: brightness(45%);
+        transition: 0.5s;
+    }
+    &-link:active {
+        filter: brightness(75%);
+        transition: 0.5s;
+    }
 }
 footer {
     width: 1920px;
@@ -943,7 +954,7 @@ footer {
 .footer-top {
     width: 100%;
     margin: 0 0;
-    padding: 80px 375px;
+    padding: 80px 375px 40px 375px;
     box-sizing: border-box;
     background-color: #191919;
     display: flex;
@@ -956,6 +967,7 @@ footer {
         display: flex;
         flex-direction: column;
         &-logo {
+            margin: 0 0 23px 0;
             display: flex;
             align-items: center;
             &-svg {
@@ -967,18 +979,33 @@ footer {
             }
         }
         .waxom-read-more-p {
+            margin: 0 0 23px 0;
             @include fontMontserrat(14px, 24px, 300, #555555);
         }
-        .waxom-read-more-span {
+        .waxom-read-more-a {
+            position: relative;
             @include fontMontserrat(14px, 20px, 400, #d1d1d1);
-        }  
-        &::after {
-            width: 0;
-            height: 0;
-            border: 8px solid transparent;
-            border-left: 8px solid #d1d1d1;
+            text-decoration: none;
+            &:hover {
+                color: #c7b299;
+                transition: 0.5s;
+            }
+            &::after {
+                content: "";
+                width: 0;
+                height: 0;
+                display: block;
+                position: absolute;
+                border: 5px solid transparent;
+                border-left: 5px solid #d1d1d1;
+                top: 5px;
+                left: 85px;
+            }
+            &:hover .waxom-read-more-a::after {
+                border-left: 5px solid #c7b299;
+                transition: 0.5s;
+            }
         }
-        
     }
     .recent-posts {
         margin: 0 0;
@@ -988,19 +1015,44 @@ footer {
         display: flex;
         flex-direction: column;
         &-h3 {
+            margin: 25px 0 0 0;
+            text-align: left;
             @include fontRaleway(24px, 1.2, 700, #ffffff);
         }
         .recent-posts-a {
+            margin: 0 0 20px 0;
+            padding: 0 0 18px 0;
             display: flex;
             flex-direction: column;
             text-decoration: none;
             border-bottom: 2px solid #252525;
             .recent-posts-date {
                 @include fontMontserrat(12px, 20px, 300, #363636);
+                transition: 0.5s;
             }
             .recent-posts-heading {
                 @include fontMontserrat(14px, 20px, 300, #555555);
+                transition: 0.5s;
             }
+        &:last-child {
+            border: none;
+        }
+        &:hover .recent-posts-date {
+            color: #ffffff;
+            transition: 2s;
+        }
+        &:hover .recent-posts-heading {
+            color: #c7b299;
+            transition: 0.5s;
+        }
+        &:active .recent-posts-date {
+            color: #363636;
+            transition: 0.5s;
+        }
+        &:active .recent-posts-heading {
+            color: #555555;
+            transition: 0.5s;
+        }
         }
     }
     .our-twitter {
@@ -1008,19 +1060,43 @@ footer {
         margin: 0 0;
         padding: 0 0;
         &-h3 {
+            margin: 24px 0 0 0;
             @include fontRaleway(24px, 1.2, 700, #ffffff);
         }
         &-info {
+            margin: 15px 0 0 0;
+            padding: 0 0 10px 0;
             border-bottom: 2px solid #252525;
             &-p {
+                margin: 0px 0 5px 0;
                 @include fontMontserrat(14px, 20px, 300, #555555);
                 &-a {
                     color: #00bff3;
+                    text-decoration: none;
+                    &:hover {
+                        color: #ffffff;
+                    }
+                    &:active {
+                        color: #c7b299;
+                    }
                 }
             }
+            &-span {
+                @include fontMontserrat(12px, 20px, 300, #363636);
+            }
+        &:last-child {
+            border: none;
+        }
         }
         .our-twitter-info-link {
             color: #959595;
+            text-decoration: none;
+            &:hover {
+                color: #ffffff;
+            }
+            &:active {
+                color: #c7b299;
+            }
         }
     }
     .dribbble-widget {
@@ -1032,17 +1108,30 @@ footer {
             @include fontRaleway(24px, 1.2, 700, #ffffff);
         }
         .dribbble-widget-galery {
+            height: 208px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             align-content: space-between;
+            &-a {
+                text-decoration: none;
+                transition: 0.5s;
+            }
+            &-a:hover {
+                filter: brightness(45%);
+                transition: 0.5s;
+            }
+            &-a:active {
+                filter: brightness(75%);
+                transition: 0.5s;
+            }
         }
     }
 }
 .footer-bottom {
     width: 100%;
     margin: 0 0;
-    padding: 45px 375px;
+    padding: 45px 375px 55px 375px;
     box-sizing: border-box;
     background-color: #111111;
     display: flex;
@@ -1052,6 +1141,28 @@ footer {
         .footer-bottom-a {
             color: #959595;
             text-decoration: none;
+            transition: 0.5s;
+            &:hover {
+                color: #ffffff;
+                transition: 0.5s;
+            }
+            &:active {
+                color: #c7b299;
+                transition: 0.5s;
+            }
+        }
+        .footer-bottom-span-link {
+            text-decoration: none;
+            color: #555555;
+            transition: 0.5s;
+            &:hover {
+                color: #c7b299;
+                transition: 0.5s;
+            }
+            &:active {
+                color: #ffffff;
+                transition: 0.5s;
+            }
         }
         .footer-bottom-line {
             color: #252525;
