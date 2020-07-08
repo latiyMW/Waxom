@@ -106,7 +106,36 @@ header {
             transition: 0.5s;
         }
         &-search {
+            width: 30px;
+            height: 30px;
             color: #ffffff;
+            position: relative;
+            .search-icon-label {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .search-icon-input {
+                width: 0;
+                min-height: 0;
+                padding: 5px;
+                box-sizing: border-box;
+                background-color: transparent;
+                border: none;
+                position: absolute;
+                outline: none;
+                top: 37px;
+                left: -170px;
+                color: #ffffff;
+                @include fontMontserrat(16px, 1.2, 300, #ffffff);
+                text-transform: capitalize;
+                &:focus {
+                    width: 200px;
+                    min-height: 20px;
+                    transition: width 1s ease;
+                    border-bottom: 2px solid #ffffff;
+                }
+            }
         }
         &-search-svg {
             fill: #ffffff;
@@ -990,6 +1019,10 @@ footer {
                 color: #c7b299;
                 transition: 0.5s;
             }
+            &:active {
+                color: #555555;
+                transition: 0.5s;
+            }
             &::after {
                 content: "";
                 width: 0;
@@ -1003,6 +1036,10 @@ footer {
             }
             &:hover .waxom-read-more-a::after {
                 border-left: 5px solid #c7b299;
+                transition: 0.5s;
+            }
+            &:active .waxom-read-more-a::after {
+                border-left: 5px solid #555555;
                 transition: 0.5s;
             }
         }
@@ -1020,7 +1057,7 @@ footer {
             @include fontRaleway(24px, 1.2, 700, #ffffff);
         }
         .recent-posts-a {
-            margin: 0 0 20px 0;
+            margin: 20px 0 0 0;
             padding: 0 0 18px 0;
             display: flex;
             flex-direction: column;
@@ -1073,11 +1110,14 @@ footer {
                 &-a {
                     color: #00bff3;
                     text-decoration: none;
+                    transition: 0.5s;
                     &:hover {
                         color: #ffffff;
+                        transition: 0.5s;
                     }
                     &:active {
                         color: #c7b299;
+                        transition: 0.5s;
                     }
                 }
             }
@@ -1093,9 +1133,11 @@ footer {
             text-decoration: none;
             &:hover {
                 color: #ffffff;
+                transition: 0.5s;
             }
             &:active {
                 color: #c7b299;
+                transition: 0.5s;
             }
         }
     }
