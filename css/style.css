@@ -902,10 +902,21 @@ main {
 }
 
 .latest-projects-show-items-a {
-  display: block;
-  text-decoration: none;
+  width: 370px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  box-sizing: border-box;
   position: relative;
 }
 

@@ -462,6 +462,12 @@ main {
             overflow: hidden;
             background-color: #615855;
             &-a {
+                width: 370px;
+                box-sizing: border-box;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                overflow: hidden;
                 display: block;
                 text-decoration: none;
                 box-sizing: border-box;
