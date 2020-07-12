@@ -186,6 +186,8 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   list-style: none;
 }
 
@@ -1079,7 +1081,6 @@ main {
 
 .video-presentation {
   width: 100%;
-  /*min-height: 700px;*/
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -1435,6 +1436,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1545,7 +1548,6 @@ main {
 }
 
 .recent-posts-items .recent-posts-item-dis-span::after .recent-posts-item-dis-span:hover::after {
-  content: "";
   border-left: 5px solid #ffffff !important;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1717,6 +1719,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2091,6 +2095,8 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2145,4 +2151,138 @@ footer {
 
 .footer-bottom-span .footer-bottom-line {
   color: #252525;
+}
+
+@media (max-width: 576px) {
+  body {
+    width: 100%;
+  }
+  header {
+    width: 100%;
+    height: auto;
+  }
+  .header-top {
+    margin: 0 0;
+    padding: 2%;
+  }
+  .header-top-nav {
+    width: 100%;
+  }
+  .header-top-nav .header-top-menu-ul {
+    width: auto;
+  }
+  .header-bottom {
+    display: none;
+  }
+  .featur {
+    margin: 0 0 2% 0;
+    padding: 1%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .realization {
+    display: none;
+  }
+  .rate {
+    display: none;
+  }
+  .latest-projects {
+    display: none;
+  }
+  .video-presentation {
+    display: none;
+  }
+  .excellent-for-mobile-devices {
+    height: auto;
+    padding: 2%;
+  }
+  .excellent-for-mobile-devices-wrapper {
+    max-width: 100%;
+    background-image: url(../img/excellent-for-mobile-devices.png);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: 30%;
+    /*.excellent-for-mobile-devices-ul li:first-child::before {
+                max-width: 21px;
+                top: 1%;
+                left: 36%;
+            }
+            .excellent-for-mobile-devices-ul li:nth-child(2)::before {
+                top: 27%;
+                left: 36%;
+            }
+            .excellent-for-mobile-devices-ul li:nth-child(3)::before {
+                top: 52%;
+                left: 36%;
+            }
+            .excellent-for-mobile-devices-ul li:last-child::before {
+                top: 77%;
+                left: 36%;
+            }*/
+  }
+  .excellent-for-mobile-devices-wrapper::before {
+    display: none;
+  }
+  .excellent-for-mobile-devices-wrapper .excellent-for-mobile-devices-h3 {
+    margin: 1% auto;
+  }
+  .excellent-for-mobile-devices-wrapper .excellent-for-mobile-devices-p {
+    margin: 0 auto;
+  }
+  .excellent-for-mobile-devices-wrapper .excellent-for-mobile-devices-ul {
+    margin: 3% 0 0 0;
+    padding: 0 0 0 40%;
+    list-style-image: url(../img/excellent-for-mobile-devices-ul.svg);
+  }
+  .achievements {
+    display: none;
+  }
+  .recent-posts {
+    padding: 2%;
+  }
+  .recent-posts-p {
+    width: 100%;
+  }
+  .recent-posts-items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .recent-posts .recent-posts-item-btn {
+    display: none;
+  }
+  .customers {
+    padding: 2%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .customers-link:nth-child(1), .customers-link:nth-child(2) {
+    margin-bottom: 2%;
+  }
+  footer {
+    width: 100%;
+  }
+  .footer-top {
+    display: none;
+  }
+  .footer-bottom {
+    padding: 2%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .footer-bottom-span:first-child {
+    width: 100%;
+    margin: 0 0 2% 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
 }

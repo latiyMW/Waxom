@@ -69,6 +69,7 @@ header {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
             list-style: none;
         }
             &-link {
@@ -584,7 +585,6 @@ main {
 }
 .video-presentation {
     width: 100%;
-    /*min-height: 700px;*/
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
@@ -802,6 +802,7 @@ main {
         width: 100%;
         margin: 0 0;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         .recent-posts-item {
             width: 370px;
@@ -864,7 +865,6 @@ main {
                         left: 85px;
                         transition: 0.5s;
                         .recent-posts-item-dis-span:hover::after {
-                            content: "";
                             border-left: 5px solid #ffffff !important;
                             transition: 0.5s;
                         }
@@ -973,6 +973,7 @@ main {
     padding: 136px 400px;
     box-sizing: border-box;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-image: url(../img/customers.jpg);
@@ -1188,6 +1189,7 @@ footer {
     box-sizing: border-box;
     background-color: #111111;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     &-span {
         @include fontMontserrat(13px, 20px, 300, #555555);
@@ -1222,3 +1224,5 @@ footer {
         }
     }
 }
+
+@import "media";
