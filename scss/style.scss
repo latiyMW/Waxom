@@ -350,7 +350,7 @@ main {
         box-sizing: border-box;
         &-img:first-child {
             position: absolute;
-            top: 81px;
+            top: 82px;
             left: 1px;
             z-index: 1;
         }
@@ -360,7 +360,7 @@ main {
         }
         &-img:last-child {
             position: absolute;
-            top: 81px;
+            top: 82px;
             right: 1px;
             z-index: 1;
         }
@@ -956,6 +956,7 @@ main {
         display: flex;
         justify-content: center;
         .recent-posts-item-prev, .recent-posts-item-next {
+            background-color: #ffffff;
             border: none;
         }
         .recent-posts-item-prev-svg, .recent-posts-item-next-svg {

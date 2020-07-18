@@ -116,8 +116,8 @@
     }
     .featur {
         margin: 0 0 2% 0;
-        padding: 20% 1% 1% 1%;
-        box-sizing: content-box;
+        padding: 23% 1% 1% 1%;
+        box-sizing: border-box;
         justify-content: center;
     }
     .realization {
@@ -135,7 +135,7 @@
     .excellent-for-mobile-devices {
         height: auto;
         padding: 2%;
-        box-sizing: content-box;
+        box-sizing: border-box;
         &-wrapper {
             max-width: 100%;
             background-image: url(../img/excellent-for-mobile-devices.png);
@@ -164,12 +164,30 @@
     }
     .recent-posts {
         padding: 2%;
-        box-sizing: content-box;
+        box-sizing: border-box;
         &-p {
             width: 100%;
         }
         &-items {
             justify-content: center;
+            box-sizing: border-box;
+            .recent-posts-item {
+                box-sizing: border-box;
+                &-a {
+                    box-sizing: border-box;
+                    &-img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+                &-dis {
+                    width: 100%;
+                    .recent-posts-item-dis-calendar {
+                        width: 15%;
+                        height: 15%;
+                    }
+                }
+            }
         }
         .recent-posts-item-btn {
             display: none;
@@ -177,28 +195,39 @@
     }
     .customers {
         padding: 2%;
-        box-sizing: content-box;
+        box-sizing: border-box;
         align-items: center;
         justify-content: space-around;
         background-size: cover;
         &-link {
             margin: 2% 0;
+            &-img {
+                width: 100%;
+                height: 100%;
+            }
         }
     }
     footer {
         width: 100%;
+        box-sizing: border-box;
     }
     .footer-top {
         display: none;
     }
     .footer-bottom {
         padding: 2%;
-        box-sizing: content-box;
+        box-sizing: border-box;
         justify-content: center;
         &-span:first-child {
             width: 100%;
             margin: 0 0 2% 0;
             display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        &-span:last-child {
+            display: flex;
+            flex-wrap: wrap;
             justify-content: space-evenly;
         }
     }
